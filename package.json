@@ -1,0 +1,37 @@
+{
+  "name": "michelle-vance-portfolio-testing",
+  "version": "1.0.0",
+  "description": "TESTING BACKUP - Professional portfolio for Michelle Vance - Creative Developer, AI Engineer & Marketing Strategist",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "python -m http.server 8001 --directory public",
+    "build": "echo 'Static site - no build required'",
+    "start": "python -m http.server 8001 --directory public",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "ai-engineering",
+    "creative-design",
+    "michelle-vance",
+    "trendsetters-group"
+  ],
+  "author": {
+    "name": "Michelle Vance",
+    "email": "michelletrendsetters@gmail.com",
+    "url": "https://github.com/michellevance"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IloveChanel/michelle-vance-portfolio.git"
+  },
+  "homepage": "https://michelletrendsetter.com",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

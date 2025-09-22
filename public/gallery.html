@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVP Decor Gallery - Premium Painting Projects | Michelle Vance</title>
+    <meta name="description" content="Stunning gallery of MVP Decor's premium painting projects. Interior design, cabinet refinishing, exterior transformations. Macomb & Oakland County's finest.">
+    <meta name="keywords" content="painting gallery, interior design, cabinet refinishing, exterior painting, MVP Decor, Michelle Vance, Macomb County, Oakland County">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="gallery-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">Michelle</span>
+                    <span class="logo-accent">Trendsetters</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="mailto:michelletrendsetters@gmail.com" class="nav-link nav-cta">Start Your Project</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">🎨 Award-Winning Portfolio</span>
+                </div>
+                <h1 class="gallery-hero-title">
+                    Michelle's <span class="gradient-text">Creative Portfolio</span>
+                </h1>
+                <p class="gallery-hero-subtitle">
+                    Where <strong>strategic design</strong> meets <strong>business excellence</strong>. 
+                    From Fortune 500 enterprise solutions to championship racing graphics and emergency medical fleet branding - showcasing award-winning professional work that drives measurable results.
+                </p>
+                <div class="gallery-stats">
+                    <div class="gallery-stat">
+                        <span class="stat-number">$5M+</span>
+                        <span class="stat-text">Client ROI Generated</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-text">Enterprise Projects</span>
+                    </div>
+                    <div class="gallery-stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-text">Industry Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="racing">
+                    <i class="fas fa-flag-checkered"></i> Racing Graphics
+                </button>
+                <button class="filter-btn" data-filter="medical">
+                    <i class="fas fa-ambulance"></i> Medical Fleet
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-laptop-code"></i> Web Development
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <i class="fas fa-robot"></i> AI Solutions
+                </button>
+                <button class="filter-btn" data-filter="branding">
+                    <i class="fas fa-palette"></i> Brand Identity
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pinterest-Style Gallery Grid -->
+    <section class="pinterest-gallery">
+        <div class="container">
+            <div class="masonry-grid" id="gallery-grid">
+                
+                <!-- MVP Decor Web Development -->
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-card">
+                        <img src="images/projects/mvp-decor-website.jpg" alt="MVP Decor Website - Premium Painting Company" loading="lazy" onerror="this.src='https://via.placeholder.com/400x500/ff006e/ffffff?text=MVP+Decor+Website'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>MVP Decor Premium Website</h3>
+                                <p>$500K+ revenue generating platform with 300% lead increase</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Web Dev</span>
+                                    <span class="tag">ROI: 1,200%</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roush Racing Graphics -->
+                <div class="gallery-item" data-category="racing">
+                    <div class="gallery-card">
+                        <img src="images/projects/roush-racing-99.jpg" alt="Roush Racing #99 Championship Graphics" loading="lazy" onerror="this.src='https://via.placeholder.com/400x600/00ff00/000000?text=Roush+Racing+99'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Roush Racing #99 Championship</h3>
+                                <p>200+ MPH performance graphics for championship racing</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Racing</span>
+                                    <span class="tag">200+ MPH</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-flag-checkered"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MedStar Emergency Fleet -->
+                <div class="gallery-item" data-category="medical">
+                    <div class="gallery-card">
+                        <img src="images/projects/medstar-fleet.jpg" alt="MedStar Emergency Medical Fleet Branding" loading="lazy" onerror="this.src='https://via.placeholder.com/400x550/ff0000/ffffff?text=MedStar+Emergency+Fleet'">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>MedStar Emergency Fleet</h3>
+                                <p>Life-saving fleet branding serving 3M+ residents</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Medical</span>
+                                    <span class="tag">Life-Saving</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-ambulance"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Social Media Platform -->
+                <div class="gallery-item" data-category="ai">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x450/ffbe0b/000000?text=AI+Social+Media+Platform" alt="AI-Powered Social Media Automation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>AI Social Media Automation</h3>
+                                <p>$750K savings with 10K+ posts monthly processing</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">AI/ML</span>
+                                    <span class="tag">$750K Savings</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-robot"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Data Analytics Platform -->
+                <div class="gallery-item" data-category="ai">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x500/06ffa5/000000?text=AI+Analytics+Platform" alt="Enterprise AI Business Intelligence" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Enterprise AI Analytics</h3>
+                                <p>$3.2M operational savings through predictive intelligence</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Enterprise AI</span>
+                                    <span class="tag">$3.2M ROI</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-chart-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Michelle Trendsetters Group Branding -->
+                <div class="gallery-item" data-category="branding">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x400/ff4500/ffffff?text=Michelle+Trendsetters+Group" alt="Michelle Trendsetters Group Brand Identity" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Michelle Trendsetters Group</h3>
+                                <p>Executive-level brand identity with racing-inspired elements</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Branding</span>
+                                    <span class="tag">Executive</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-crown"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roush Racing Fleet Extensions -->
+                <div class="gallery-item" data-category="racing">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x650/3a86ff/ffffff?text=Roush+Racing+Fleet" alt="Roush Racing Extended Fleet Graphics" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Roush Racing Fleet Expansion</h3>
+                                <p>$1.2M budget fleet branding with 40% sponsorship growth</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Fleet Design</span>
+                                    <span class="tag">40% Growth</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-cars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ford Collaboration Project -->
+                <div class="gallery-item" data-category="branding">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x480/8338ec/ffffff?text=Ford+Partnership" alt="Ford Corporate Partnership Design" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Ford Corporate Partnership</h3>
+                                <p>Strategic design collaboration with automotive industry leader</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Automotive</span>
+                                    <span class="tag">Corporate</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-car"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MVP Decor Mobile App -->
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x700/ff006e/ffffff?text=MVP+Decor+Mobile" alt="MVP Decor Mobile Application" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>MVP Decor Mobile Platform</h3>
+                                <p>Advanced booking system with conversion optimization</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Mobile App</span>
+                                    <span class="tag">Conversion</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MedStar Digital Infrastructure -->
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x520/ff0000/ffffff?text=MedStar+Digital+Systems" alt="MedStar Health Digital Infrastructure" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>MedStar Digital Infrastructure</h3>
+                                <p>Enterprise systems serving 30K+ employees with $2.1M savings</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Enterprise</span>
+                                    <span class="tag">Healthcare IT</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-hospital"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Championship Racing Awards -->
+                <div class="gallery-item" data-category="racing">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x350/ffbe0b/000000?text=Racing+Championships" alt="Racing Championship Awards and Recognition" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Championship Recognition</h3>
+                                <p>Award-winning motorsports design excellence</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Awards</span>
+                                    <span class="tag">Championship</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-trophy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fortune 500 AI Solutions -->
+                <div class="gallery-item" data-category="ai">
+                    <div class="gallery-card">
+                        <img src="https://via.placeholder.com/400x580/3a86ff/ffffff?text=Fortune+500+AI" alt="Fortune 500 AI Business Solutions" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Fortune 500 AI Solutions</h3>
+                                <p>Enterprise-grade machine learning platforms</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Fortune 500</span>
+                                    <span class="tag">Enterprise AI</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-building"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cabinet Refinishing -->
+                <div class="gallery-item" data-category="cabinet">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=400&h=450&fit=crop" alt="Kitchen Cabinet Makeover" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Kitchen Cabinet Makeover</h3>
+                                <p>From dated oak to modern white elegance</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Cabinet</span>
+                                    <span class="tag">Kitchen</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exterior Projects -->
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=550&fit=crop" alt="Exterior House Transformation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Victorian Revival</h3>
+                                <p>Historic home exterior restoration</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Exterior</span>
+                                    <span class="tag">Historic</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=480&fit=crop" alt="Dining Room Elegance" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Elegant Dining Space</h3>
+                                <p>Rich colors with golden accents</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Interior</span>
+                                    <span class="tag">Luxury</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Projects -->
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=520&fit=crop" alt="Office Space Design" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Modern Office Space</h3>
+                                <p>Professional workspace transformation</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Commercial</span>
+                                    <span class="tag">Office</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cabinet">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=400&h=400&fit=crop" alt="Bathroom Vanity Refinish" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Bathroom Vanity Refresh</h3>
+                                <p>Custom color matching and finish</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Cabinet</span>
+                                    <span class="tag">Bathroom</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=580&fit=crop" alt="Modern Exterior Paint" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Contemporary Exterior</h3>
+                                <p>Bold color blocking with premium durability</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Exterior</span>
+                                    <span class="tag">Modern</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=460&fit=crop" alt="Kids Room Fun Design" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Playful Kids Room</h3>
+                                <p>Creative design with durable finishes</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Interior</span>
+                                    <span class="tag">Kids</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=500&fit=crop" alt="Restaurant Interior" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Restaurant Atmosphere</h3>
+                                <p>Ambiance-enhancing color scheme</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Commercial</span>
+                                    <span class="tag">Restaurant</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exterior">
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=440&fit=crop" alt="Fence and Deck Staining" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Deck & Fence Restoration</h3>
+                                <p>Weather protection with style</p>
+                                <div class="gallery-tags">
+                                    <span class="tag">Exterior</span>
+                                    <span class="tag">Deck</span>
+                                </div>
+                            </div>
+                            <div class="gallery-actions">
+                                <button class="gallery-btn" onclick="openLightbox(this)">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="gallery-btn">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="btn btn-primary load-more-btn">
+                    <i class="fas fa-plus"></i> Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Call to Action -->
+    <section class="gallery-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let Michelle Trendsetters Group bring your creative vision to life with award-winning design and development expertise.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+12483219121" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call (248) 321-9121
+                    </a>
+                    <a href="mailto:michelletrendsetters@gmail.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get Free Consultation
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <span><i class="fas fa-map-marker-alt"></i> Serving Clients Worldwide</span>
+                    <span><i class="fas fa-star"></i> Award-Winning Creative Solutions</span>
+                    <span><i class="fas fa-palette"></i> Trendsetters Group</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" alt="Gallery Image">
+            <div class="lightbox-info" id="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
