@@ -720,6 +720,89 @@
         </div>
     </footer>
 
+    <!-- Sparky Chatbot -->
+    <div id="sparky-chatbot" class="sparky-container">
+        <!-- Floating Sparky Button -->
+        <div id="sparky-toggle" class="sparky-toggle">
+            <div class="sparky-avatar">
+                <div class="sparky-face">
+                    <div class="sparky-eyes">
+                        <div class="eye left-eye"></div>
+                        <div class="eye right-eye"></div>
+                    </div>
+                    <div class="sparky-mouth"></div>
+                </div>
+                <div class="sparky-glow"></div>
+            </div>
+            <div class="sparky-pulse"></div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="sparky-chat" class="sparky-chat hidden">
+            <div class="sparky-header">
+                <div class="sparky-info">
+                    <div class="sparky-mini-avatar">
+                        <div class="mini-face">
+                            <div class="mini-eyes">
+                                <div class="mini-eye"></div>
+                                <div class="mini-eye"></div>
+                            </div>
+                            <div class="mini-mouth"></div>
+                        </div>
+                    </div>
+                    <div class="sparky-details">
+                        <h3>Sparky ⚡</h3>
+                        <span class="sparky-status">Your Fun AI Buddy</span>
+                        <div class="sparky-mood" id="sparky-mood">😄 Playful Mode</div>
+                    </div>
+                </div>
+                <button id="sparky-close" class="sparky-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="sparky-messages" id="sparky-messages">
+                <div class="sparky-message bot-message">
+                    <div class="message-avatar">
+                        <div class="mini-sparky">⚡</div>
+                    </div>
+                    <div class="message-content">
+                        <p>Hey there! 👋 I'm Sparky, your super fun AI companion! This is part of Michelle's Portfolio - just another awesome feature she can create!</p>
+                        <p>Want to see what I can do? Ask me about:</p>
+                        <div class="quick-actions">
+                            <button class="quick-btn" data-action="joke">Tell me a joke 😂</button>
+                            <button class="quick-btn" data-action="weather">Weather info 🌤️</button>
+                            <button class="quick-btn" data-action="portfolio">About this portfolio 💼</button>
+                            <button class="quick-btn" data-action="seo">SEO Help 📈</button>
+                            <button class="quick-btn" data-action="game">Play a game 🎮</button>
+                            <button class="quick-btn" data-action="daily">Daily content 📅</button>
+                            <button class="quick-btn" data-action="compliment">Compliment me �</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sparky-input-area">
+                <div class="input-container">
+                    <input type="text" id="sparky-input" placeholder="Type something fun... or just say hi! 🎉" maxlength="200">
+                    <button id="sparky-send" class="sparky-send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="sparky-suggestions">
+                    <button class="suggestion-btn" data-suggestion="surprise me">Surprise me! 🎲</button>
+                    <button class="suggestion-btn" data-suggestion="play a game">Play a game 🎮</button>
+                    <button class="suggestion-btn" data-suggestion="daily content">Daily specials 📅</button>
+                    <button class="suggestion-btn" data-suggestion="change mood">Change your mood 🎭</button>
+                    <button class="suggestion-btn" data-suggestion="would you rather">Would you rather 🤔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="sparky-weather.js"></script>
+    <script src="sparky-expanded.js"></script>
+    <script src="sparky-seo.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
