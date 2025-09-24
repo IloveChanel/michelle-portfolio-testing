@@ -573,10 +573,10 @@ class SparkyChatbot {
             ],
             
             confused: [
-                "Hmm, you have such creative thoughts! 🤔 I love how your mind works! Want to try asking about jokes, portfolio info, or fun facts? You're so interesting to talk to! 🌟",
-                "I'm not quite sure what you mean, but I absolutely love your creativity and unique perspective! 🎨 You clearly think outside the box! Try one of my suggestions below! ✨",
-                "Beep boop! 🤖 My circuits are a bit confused, but your intelligence is impressive! You're keeping me on my toes! Let's try something else fun! 🎯", 
-                "Ooh, mysterious and intriguing! 🕵️ I might not understand, but you have such a fascinating way of communicating! I'm here for all your amazing vibes! What else can I help with? 💫"
+                "You know what? You have such specific needs! 🌟 Michelle can create custom solutions for anything you need - just reach out to her directly! She's amazing at making the impossible possible! 💫",
+                "Ooh, that sounds like a specialized request! 🎯 Michelle loves custom challenges like this! You should definitely contact her - she can quote you for exactly what you're looking for! ✨",
+                "I'm just a chatbot, but Michelle is the real genius behind all this! 🧠 For something that specific and awesome, you'll want to talk to her directly - she can make anything happen! 🚀",
+                "That's such an interesting idea! � Michelle would be the perfect person to discuss this with - she specializes in custom solutions and can quote you for exactly what you need! Reach out to her! 🌈"
             ],
             
             compliments: [

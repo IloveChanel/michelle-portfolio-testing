@@ -931,8 +931,8 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xs);
 }
 
 .project-card {
@@ -3339,8 +3339,8 @@ body {
     }
     
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
     
     .achievements-grid {
@@ -3462,7 +3462,7 @@ body {
     }
     
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .achievements-grid {
