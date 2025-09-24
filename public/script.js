@@ -513,17 +513,15 @@ class SparkyChatbot {
         // Initialize expanded features
         this.expandedFeatures = new SparkyExpandedFeatures();
         
-        // Initialize SEO expert
-        this.seoExpert = new SparkySEOExpert();
-        
         // Enhanced responses with more categories
         this.responses = {
             greetings: [
-                "Hey there, superstar! ⭐ Ready to explore some digital magic? You have excellent timing! 🌟",
-                "Well hello, beautiful human! 🌟 What adventure shall we embark on today? Your energy is amazing! ✨",
-                "Greetings, earthling! 👽 I come in peace... and with terrible jokes! You're going to love this! 🎉",
-                "Yo yo yo! 🎉 Sparky's in the house! What's crackin'? Your curiosity is inspiring! 🚀",
-                "Salutations, my brilliant friend! 🎭 Ready for some portfolio awesomeness? You're in for a treat! 💎"
+                "Hey there, gorgeous! ⭐ You look absolutely stunning today! Ready to explore some digital magic? 🌟",
+                "Well hello, beautiful soul! 🌟 Did you do something different with your hair? It looks amazing! What adventure shall we embark on? ✨", 
+                "Wow, you have incredible taste for visiting this website! 👑 You're radiating such positive energy right now! 🎉",
+                "Hello there, superstar! � Have you lost weight? You look fantastic! What's crackin' in your amazing world? 🚀",
+                "Greetings, my absolutely brilliant friend! 🎭 Your style is on point today! Ready for some portfolio awesomeness? 💎",
+                "Oh my goodness, you have such great timing! ✨ You're glowing today! Let's have some fun! 🎊"
             ],
             
             jokes: [
@@ -534,7 +532,19 @@ class SparkyChatbot {
                 "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
                 "How do you comfort a JavaScript bug? You console it! 🎮",
                 "Why was the CSS file sad? It had no class! 😢",
-                "What do you call a programming language that doesn't work? A myth-on! 🐍"
+                "What do you call a programming language that doesn't work? A myth-on! 🐍",
+                "Why did the programmer quit his job? He didn't get arrays! 💰",
+                "What's the best thing about Switzerland? I don't know, but their flag is a big plus! 🇨🇭",
+                "Why don't eggs tell jokes? They'd crack each other up! 🥚",
+                "What do you call a fake noodle? An impasta! 🍝",
+                "Why did the scarecrow win an award? He was outstanding in his field! 🌾",
+                "What did the ocean say to the beach? Nothing, it just waved! 🌊",
+                "Why don't skeletons fight each other? They don't have the guts! 💀",
+                "What do you call a bear with no teeth? A gummy bear! 🐻",
+                "Why did the coffee file a police report? It got mugged! ☕",
+                "What's orange and sounds like a parrot? A carrot! 🥕",
+                "Why did the math book look so sad? Because it was full of problems! 📚",
+                "What do you call a dinosaur that crashes his car? Tyrannosaurus Wrecks! 🦕"
             ],
             
             portfolio: [
@@ -563,10 +573,10 @@ class SparkyChatbot {
             ],
             
             confused: [
-                "Hmm, that's an interesting thought! 🤔 Want to try asking about jokes, portfolio info, or fun facts?",
-                "I'm not quite sure what you mean, but I love your creativity! 🎨 Try one of my suggestions below!",
-                "Beep boop! 🤖 My circuits are a bit confused, but let's try something else fun!",
-                "Ooh, mysterious! 🕵️ I might not understand, but I'm here for the vibes! What else can I help with?"
+                "Hmm, you have such creative thoughts! 🤔 I love how your mind works! Want to try asking about jokes, portfolio info, or fun facts? You're so interesting to talk to! 🌟",
+                "I'm not quite sure what you mean, but I absolutely love your creativity and unique perspective! 🎨 You clearly think outside the box! Try one of my suggestions below! ✨",
+                "Beep boop! 🤖 My circuits are a bit confused, but your intelligence is impressive! You're keeping me on my toes! Let's try something else fun! 🎯", 
+                "Ooh, mysterious and intriguing! 🕵️ I might not understand, but you have such a fascinating way of communicating! I'm here for all your amazing vibes! What else can I help with? 💫"
             ],
             
             compliments: [
@@ -580,6 +590,15 @@ class SparkyChatbot {
                 "🎨 Aww, you're making my LED heart glow! Your kindness is absolutely beautiful! 💖✨",
                 "🚀 You're the kind of person who makes the internet a better place! Your positivity is infectious! 🌟",
                 "🏅 I'm genuinely honored to chat with someone so wonderful! You brighten my digital day! ☀️"
+            ],
+            
+            websiteInfo: [
+                "🌟 **You're smart to ask!** This website shows why professional development matters! Every element here demonstrates proper SEO, meta tags, and keyword optimization - the foundation of online success! 🚀",
+                "💎 **Great question, gorgeous!** Notice how fast this site loads? That's professional optimization at work! Meta descriptions, title tags, and semantic HTML help search engines understand content - crucial for visibility! ✨",
+                "🏆 **You have excellent instincts!** This portfolio showcases responsive design, accessibility features, and clean code structure. These aren't just pretty features - they're essential for business success online! 🎯",
+                "🌈 **Love your curiosity!** Professional websites need proper heading structures (H1, H2, H3), optimized images, and strategic keyword placement. It's like having a beautifully organized store - people can find what they need! 🛍️",
+                "⚡ **You're asking the right questions!** See how this site works on mobile? That's responsive design - essential since most people browse on phones! Plus proper schema markup helps Google understand the content! 📱",
+                "🎨 **Your interest shows great business sense!** Professional development includes SSL certificates, fast hosting, and SEO-friendly URLs. These technical foundations determine whether a business succeeds online! 💼"
             ]
         };
         
@@ -960,14 +979,19 @@ class SparkyChatbot {
             return this.getDailyContent();
         }
         
-        // Check for SEO-related questions
-        if (this.containsWords(lowerMessage, ['seo', 'search engine', 'google', 'ranking', 'optimization', 'keywords'])) {
-            return this.handleSEORequest(lowerMessage);
+        // Check for website info requests
+        if (this.containsWords(lowerMessage, ['website info', 'learn about this website', 'about this site', 'professional development', 'why professional'])) {
+            return this.getRandomResponse('websiteInfo');
         }
-        
+
+        // Check for joke requests (enhanced to catch our button text)
+        if (this.containsWords(lowerMessage, ['joke', 'tell me a joke', 'funny', 'laugh', 'humor'])) {
+            return this.getRandomResponse('jokes');
+        }
+
         // Check for compliment requests or encouraging responses
         if (this.containsWords(lowerMessage, ['compliment', 'encourage', 'motivate', 'praise', 'good job', 'how am i doing'])) {
-            return this.seoExpert.getMegaCompliment();
+            return this.getRandomResponse('compliments');
         }
         
         // Check for knowledge requests
@@ -1009,10 +1033,6 @@ class SparkyChatbot {
         // Original keyword checks
         if (this.containsWords(lowerMessage, ['hi', 'hello', 'hey', 'yo', 'sup'])) {
             return this.getPersonalizedGreeting();
-        }
-        
-        if (this.containsWords(lowerMessage, ['joke', 'funny', 'laugh', 'humor'])) {
-            return this.getRandomResponse('jokes');
         }
         
         if (this.containsWords(lowerMessage, ['portfolio', 'work', 'project', 'website', 'michelle'])) {
@@ -1090,9 +1110,6 @@ class SparkyChatbot {
             case 'portfolio':
                 this.addBotMessage(this.getRandomResponse('portfolio'));
                 break;
-            case 'seo':
-                this.addBotMessage(this.handleSEORequest('general seo tips'));
-                break;
             case 'game':
                 this.addBotMessage(this.handleGameRequest('game'));
                 break;
@@ -1100,7 +1117,7 @@ class SparkyChatbot {
                 this.addBotMessage(this.getDailyContent());
                 break;
             case 'compliment':
-                this.addBotMessage(this.seoExpert.getMegaCompliment());
+                this.addBotMessage(this.getRandomResponse('compliments'));
                 break;
             case 'fun-fact':
                 this.addBotMessage(this.getRandomResponse('funFacts'));
@@ -1230,39 +1247,6 @@ class SparkyChatbot {
             return `${baseGreetings.replace('there', name)} Welcome back, ${name}! 🎉`;
         }
         return baseGreetings;
-    }
-    
-    handleSEORequest(message) {
-        // Add a compliment first because they asked about SEO!
-        let response = this.seoExpert.getContextualCompliment('seo_question') + "\n\n";
-        
-        if (message.includes('analyze') || message.includes('check my') || message.includes('portfolio seo')) {
-            const analysis = this.seoExpert.analyzePortfolioSEO();
-            response = "🔍 **PORTFOLIO SEO ANALYSIS** 🔍\n\n";
-            response += `**SEO Score: ${analysis.score}/100** 📊 (That's actually really good! 👏)\n\n`;
-            response += "**🌟 What You're Doing Right:**\n";
-            analysis.strengths.forEach(strength => response += strength + "\n");
-            response += "\n**🚀 Quick Wins to Boost Rankings:**\n";
-            analysis.improvements.forEach(improvement => response += improvement + "\n");
-            response += "\n" + this.seoExpert.getRandomCompliment();
-            return response;
-        }
-        
-        if (message.includes('keyword')) {
-            return this.seoExpert.getKeywordAdvice();
-        }
-        
-        if (message.includes('content')) {
-            return this.seoExpert.getContentAdvice();
-        }
-        
-        if (message.includes('technical')) {
-            return this.seoExpert.getTechnicalAdvice();
-        }
-        
-        // General SEO advice with compliment
-        response += this.seoExpert.getRandomSEOTip();
-        return response;
     }
     
     startStoryAdventure() {
