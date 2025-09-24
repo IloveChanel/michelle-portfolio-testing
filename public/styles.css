@@ -234,9 +234,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: var(--spacing-lg);
 }
 
 .nav-logo a {
@@ -253,15 +254,6 @@ body {
     align-items: center;
     gap: 12px;
     transition: all 0.3s ease;
-}
-
-.nav-logo a::before {
-    content: '🏁';
-    font-size: 1.5rem;
-    filter: none;
-    -webkit-text-fill-color: initial;
-    background: none;
-    animation: pulse 2s ease-in-out infinite;
 }
 
 .nav-logo a::after {
@@ -359,6 +351,12 @@ body {
     display: flex;
     list-style: none;
     gap: var(--spacing-xl);
+    justify-content: center;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
