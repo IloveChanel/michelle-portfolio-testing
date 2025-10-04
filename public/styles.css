@@ -5066,13 +5066,26 @@ body {
 /* Lead Magnet Section Styles */
 .lead-magnet-section {
     padding: var(--spacing-3xl) 0;
-    background: linear-gradient(135deg, #f8f9ff 0%, #fff0f8 100%);
+    background: linear-gradient(135deg, #f0f4ff 0%, #fef0ff 50%, #f0fff4 100%);
+    position: relative;
+}
+.lead-magnet-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ff006e" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%238338ec" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    pointer-events: none;
 }
 .lead-magnet-content {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 .lead-header {
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl);
 }
 .lead-subtitle {
     font-size: var(--font-size-lg);
@@ -5084,18 +5097,23 @@ body {
 }
 .lead-offers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-3xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .lead-offer-card {
     background: white;
-    border-radius: 20px;
-    padding: var(--spacing-2xl);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border: 2px solid transparent;
     transition: all 0.3s ease;
     position: relative;
+    max-width: 350px;
+    margin: 0 auto;
 }
 .lead-offer-card:hover {
     transform: translateY(-10px);
@@ -5128,9 +5146,17 @@ body {
     text-align: left;
 }
 .offer-benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     padding: var(--spacing-xs) 0;
     font-size: var(--font-size-sm);
     color: var(--text-secondary);
+}
+.offer-benefits li i {
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
 }
 .cta-btn {
     width: 100%;
