@@ -5062,3 +5062,152 @@ body {
         font-size: var(--font-size-base);
     }
 }
+
+/* Lead Magnet Section Styles */
+.lead-magnet-section {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #fff0f8 100%);
+}
+.lead-magnet-content {
+    text-align: center;
+}
+.lead-header {
+    margin-bottom: var(--spacing-3xl);
+}
+.lead-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lead-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
+}
+.lead-offer-card {
+    background: white;
+    border-radius: 20px;
+    padding: var(--spacing-2xl);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.lead-offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255,0,110,0.2);
+    border-color: var(--primary-color);
+}
+.primary-offer {
+    border-color: var(--primary-color);
+    background: linear-gradient(145deg, #fff, #fef7ff);
+}
+.offer-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+.lead-offer-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+.lead-offer-card p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+.offer-benefits {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+    text-align: left;
+}
+.offer-benefits li {
+    padding: var(--spacing-xs) 0;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+.cta-btn {
+    width: 100%;
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+}
+.offer-note {
+    font-size: var(--font-size-xs);
+    color: #666;
+    font-style: italic;
+}
+.lead-urgency {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    padding: var(--spacing-2xl);
+    color: white;
+    text-align: center;
+}
+.urgency-content h4 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+.urgency-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.9;
+}
+.urgency-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl);
+}
+.large-cta {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    min-width: 200px;
+}
+.social-proof {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+.proof-stat {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    opacity: 0.9;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    padding-right: var(--spacing-md);
+}
+.proof-stat:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Responsive Design for Lead Magnet */
+@media (max-width: 768px) {
+    .lead-offers-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    .urgency-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-proof {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .proof-stat {
+        border-right: none;
+        padding-right: 0;
+    }
+}
